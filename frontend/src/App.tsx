@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {Button} from "./components/ui/button"
 import './App.css'
 
 function App() {
@@ -11,7 +10,8 @@ function App() {
       <p className=' text-red-400 mt-28'>
         hello
       </p>
-      <div className=' w-28 h-10 bg-red-100 mx-auto'></div>
+      <Button >Hello</Button>
+      
     </>
   )
 }
