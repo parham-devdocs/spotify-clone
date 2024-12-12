@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import {Button} from "./components/ui/button"
-import './App.css'
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <p className=' text-red-400 mt-28'>
-        hello
-      </p>
-      <Button >Hello</Button>
-      
-    </>
-  )
+    <header>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+    </header>
+  );
 }
-
-export default App
