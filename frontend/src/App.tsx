@@ -3,10 +3,12 @@ import {
   SignedOut,
   SignInButton,
   UserButton,
+  useUser,
 } from "@clerk/clerk-react";
 import { Button } from "./components/ui/button";
-
 export default function App() {
+  const user = useUser();
+console.log(user.user)
   return (
     <header>
       <SignedOut>
