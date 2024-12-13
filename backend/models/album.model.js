@@ -9,4 +9,4 @@ const albumSchema =new mongoose.Schema({
 }, { timestamps: true }); // Add timestamps option here
 
 
-export const Song=mongoose.model("Album",albumSchema)
+export const Aibum=mongoose.model("Album",albumSchema)
