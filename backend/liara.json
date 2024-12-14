@@ -1,0 +1,8 @@
+{
+  "app": "happy-lamport-z11xd8bpn",
+  "port": 3000,
+  "build": {
+    "location": "iran"
+  },
+  "disks": []
+}

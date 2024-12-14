@@ -6,7 +6,7 @@ import statisticsRoutes from "./routes/statistics.route.js";
 import albumRoutes from "./routes/album.route.js";
 import songRoutes from "./routes/songs.route.js";
 import adminRoutes from "./routes/admin.route.js";
-import {clerkMiddleware } from "@clerk/express";
+import {clerkMiddleware, getAuth } from "@clerk/express";
 import { connectDb } from "../lib/db.js";
 import cors from "cors";
 dotenv.config();
@@ -17,6 +17,7 @@ app.use(cors());
 
 app.use(express.json());
 app.use(clerkMiddleware())
+
 
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
