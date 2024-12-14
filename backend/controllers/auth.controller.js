@@ -8,7 +8,8 @@ export const authController=async (req, res) => {
       // SignUp
     await  User.create({clerkId:id,imageUrl,fullName:`${firstName} ${lastName}`})
       return res.status(200).json({success:true})
-    }
+      }
+      return res.status(422).json({message:"User already exists",success:false})
  } catch (error) {
     console.log("Error in the callback", error)
     res.status(500).json({message:"Internal Server Error"})
